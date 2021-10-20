@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/searchform.css';
 
 class SearchForm extends Component {
   render() {
     const { handleChange, handleClick, artist } = this.props;
     const minimumLength = 2;
     return (
-      <div>
+      <div className="search-form">
         <input
           className="search-input"
           data-testid="search-artist-input"
