@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import '../styles/header.css';
@@ -33,6 +34,37 @@ class Header extends Component {
             { user }
           </h2>
         </div>
+        <nav>
+          <ul className="navigation-list">
+            <li>
+              <Link
+                to="/search"
+                className="itens"
+                data-testid="link-to-search"
+              >
+                Pesquisa
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/favorites"
+                className="itens"
+                data-testid="link-to-favorites"
+              >
+                Favoritas
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/profile"
+                className="itens"
+                data-testid="link-to-profile"
+              >
+                Perfil
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }
