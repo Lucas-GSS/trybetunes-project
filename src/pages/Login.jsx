@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import '../styles/login.css';
 
 class Login extends Component {
   constructor() {
@@ -26,21 +27,28 @@ class Login extends Component {
     if (loading) return <Loading />;
     if (redirect) return <Redirect to="/search" />;
     return (
-      <div data-testid="page-login">
-        <input
-          data-testid="login-name-input"
-          type="text"
-          onChange={ this.handleChange }
-        />
+      <div className="login-container">
+        <header className="login-header">
+          <h1>TrybeTunes ♪</h1>
+        </header>
+        <div data-testid="page-login" className="login">
+          <input
+            className="input-login"
+            data-testid="login-name-input"
+            type="text"
+            onChange={ this.handleChange }
+          />
 
-        <button
-          type="button"
-          data-testid="login-submit-button"
-          onClick={ this.handleClick }
-          disabled={ name.length < minimumLength }
-        >
-          Entrar
-        </button>
+          <button
+            className="button-login"
+            data-testid="login-submit-button"
+            disabled={ name.length < minimumLength }
+            onClick={ this.handleClick }
+            type="button"
+          >
+            Entrar
+          </button>
+        </div>
       </div>
     );
   }
