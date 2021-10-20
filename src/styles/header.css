@@ -13,3 +13,15 @@
   margin: 0;
   padding: 0;
 }
+
+.navigation-list {
+  background-color: #c3fbf4;
+  display: flex;
+  font-size: 23px;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.itens {
+  color: black;
+}
