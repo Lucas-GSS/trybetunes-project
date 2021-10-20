@@ -25,8 +25,7 @@ class Header extends Component {
     return (
       <header data-testid="header-component" className="header">
         <div className="header-elements">
-          <img src="https://t4.ftcdn.net/jpg/01/06/47/61/360_F_106476142_zMZkkTkhMeq0DIjV20oJI00e3QXLYIGN.jpg" alt="trybetunes-logo" width="120px" />
-
+          <span className="emoji">♪</span>
           <h1>TrybeTunes</h1>
           <h2 data-testid="header-user-name">
             Olá,

@@ -1,3 +1,8 @@
+.emoji {
+  font-size: 80px;
+  font-weight: 900;
+}
+
 .header {
   background-color: black;
   color: white;
@@ -15,13 +20,20 @@
 }
 
 .navigation-list {
-  background-color: #c3fbf4;
+  background-color: #5684ae;
   display: flex;
   font-size: 23px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
+  padding: 8px;
+}
+
+.navigation-list li:hover {
+  background-color: #c3fbf4;
 }
 
 .itens {
+  box-sizing: border-box;
   color: black;
+  width: max-content;
 }
