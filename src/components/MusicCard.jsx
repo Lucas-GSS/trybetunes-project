@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 class MusicCard extends Component {
   render() {
-    const { song } = this.props;
+    const {
+      song, favorites, handleChange } = this.props;
     return (
       <div className="music-card">
-        {song.trackName}
+        { song.trackName }
         <audio data-testid="audio-component" src={ song.previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -14,11 +15,27 @@ class MusicCard extends Component {
           <code>audio</code>
           .
         </audio>
+        <label
+          htmlFor={ song.trackId }
+        >
+          Favorita
+          <input
+            data-testid={ `checkbox-music-${song.trackId}` }
+            id={ song.trackId }
+            type="checkbox"
+            onChange={ (event) => handleChange(event, song) }
+            checked={ favorites.some((track) => track.trackId === song.trackId) }
+          />
+        </label>
       </div>
     );
   }
 }
 
-MusicCard.propTypes = PropTypes.object.isRequired;
+MusicCard.propTypes = {
+  songs: PropTypes.object,
+  favorites: PropTypes.object,
+  handleChange: PropTypes.func,
+}.isRequired;
 
 export default MusicCard;
