@@ -30,7 +30,7 @@ class Header extends Component {
           <h2 data-testid="header-user-name">
             Olá,
             { ' ' }
-            { user }
+            <span>{ user }</span>
           </h2>
         </div>
         <nav>
