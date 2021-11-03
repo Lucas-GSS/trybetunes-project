@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/musiccard.css';
 
 class MusicCard extends Component {
   render() {
@@ -7,7 +8,7 @@ class MusicCard extends Component {
       song, favorites, handleChange } = this.props;
     return (
       <div className="music-card">
-        { song.trackName }
+        <strong>{ song.trackName }</strong>
         <audio data-testid="audio-component" src={ song.previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -18,7 +19,7 @@ class MusicCard extends Component {
         <label
           htmlFor={ song.trackId }
         >
-          Favorita
+          <em>Favorita</em>
           <input
             data-testid={ `checkbox-music-${song.trackId}` }
             id={ song.trackId }

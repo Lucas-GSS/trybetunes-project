@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AlbumCard from './AlbumCard';
+import '../styles/albumlist.css';
 
 class AlbumList extends Component {
   render() {
@@ -12,10 +13,12 @@ class AlbumList extends Component {
           {' '}
           { artist }
         </p>
-        { albums.map((album) => (<AlbumCard
-          key={ album.collectionId }
-          album={ album }
-        />)) }
+        <div className="album-list">
+          { albums.map((album) => (<AlbumCard
+            key={ album.collectionId }
+            album={ album }
+          />)) }
+        </div>
       </div>
     );
   }
