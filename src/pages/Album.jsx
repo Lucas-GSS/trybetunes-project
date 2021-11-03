@@ -5,6 +5,7 @@ import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 import Loading from '../components/Loading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
+import '../styles/musiccard.css';
 
 class Album extends Component {
   constructor(props) {
@@ -50,25 +51,27 @@ class Album extends Component {
       favorites,
     } = this.state;
     return (
-      <div data-testid="page-album">
+      <main data-testid="page-album">
         <Header />
         { loading && <Loading /> }
-        <section className="album-info">
-          <img src={ artworkUrl100 } alt={ collectionName } />
-          <h4 data-testid="album-name">{ collectionName }</h4>
-          <h5 data-testid="artist-name">{ artistName }</h5>
-        </section>
-        <section className="track-list">
-          { songs.slice(1).map((song) => (
-            <MusicCard
-              key={ song.trackId }
-              song={ song }
-              favorites={ favorites }
-              handleChange={ this.handleChange }
-            />
-          )) }
-        </section>
-      </div>
+        <div className="album-container">
+          <section className="album-info">
+            <img src={ artworkUrl100 } alt={ collectionName } />
+            <h4 data-testid="album-name">{ collectionName }</h4>
+            <h5 data-testid="artist-name">{ artistName }</h5>
+          </section>
+          <section className="track-list">
+            { songs.slice(1).map((song) => (
+              <MusicCard
+                key={ song.trackId }
+                song={ song }
+                favorites={ favorites }
+                handleChange={ this.handleChange }
+              />
+            )) }
+          </section>
+        </div>
+      </main>
     );
   }
 }

@@ -36,7 +36,7 @@ class Search extends Component {
     if (loading) return <Loading />;
     if (albums.length > 0 && response) {
       return (
-        <div data-testid="page-search">
+        <div data-testid="page-search" className="album-container">
           <Header />
           <SearchForm
             handleChange={ this.handleChange }

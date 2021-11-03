@@ -29,6 +29,14 @@ class Favorites extends Component {
   render() {
     const { favorites, loading } = this.state;
     if (loading) return <Loading />;
+    if (!favorites.length) {
+      return (
+        <>
+          <Header />
+          <h3>Nenhuma música favoritada</h3>
+        </>
+      );
+    }
     return (
       <div data-testid="page-favorites">
         <Header />
