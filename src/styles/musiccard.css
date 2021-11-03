@@ -1,0 +1,40 @@
+.album-info {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%) , 0 8px 16px rgb(0 0 0 / 10%);
+  display: flex;
+  flex-flow: column;
+  margin-left: 10%;
+  margin-top: 2%;
+  padding: 10px;
+  position: fixed;
+  width: min-content;
+}
+
+.album-info img {
+  width: 150px;
+}
+
+.track-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+.music-card {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+.music-card audio {
+  margin: 10px 0;
+}
+
+.music-card label:hover {
+  cursor: pointer;
+  font-weight: 800;
+}
