@@ -9,6 +9,7 @@
   font-size: 20px;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 .header-elements {
@@ -20,20 +21,23 @@
 }
 
 .navigation-list {
-  background-color: #5684ae;
   display: flex;
   font-size: 23px;
   justify-content: space-around;
   list-style: none;
+  margin: 0;
   padding: 8px;
 }
 
-.navigation-list li:hover {
-  background-color: #c3fbf4;
+.itens {
+  background-color: #1877f2;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 32vw;
 }
 
-.itens {
-  box-sizing: border-box;
+.itens:hover {
+  background-color: #5efff2;
   color: black;
-  width: max-content;
 }
