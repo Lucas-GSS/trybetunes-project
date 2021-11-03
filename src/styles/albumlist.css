@@ -1,0 +1,10 @@
+.album-list {
+  align-content: flex-start;
+  align-items: baseline;
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
